@@ -1,6 +1,5 @@
 'use client'
 import { React } from 'react';
-import Button from "@mui/material/Button"
 import Link from 'next/link'
 import Footer from '../app/components/Footer'
 
@@ -16,13 +15,13 @@ export default function Home() {
       </div>  
       <div className='flex flex-col items-center mt-6 sm:flex-row sm:space-x-8 children:pb-6'>
         <Link href={"/about"}>
-          <Button variant='outlined' className='tracking-widest'>About</Button>
+          <button className='btn btn-primary tracking-widest'>About</button>
         </Link>
         <Link href={"/experience"}>
-          <Button variant='outlined' className='tracking-widest'>Experience</Button>
+          <button className='btn btn-primary tracking-widest'>Experience</button>
         </Link>
         <Link href={"/blog"}>
-          <Button variant='outlined' className='tracking-widest'>Blog</Button>
+          <button className='btn btn-primary tracking-widest'>Blog</button>
         </Link>
         </div>
     </main>

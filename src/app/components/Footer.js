@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithubAlt, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { faPhone, faFileLines } from '@fortawesome/free-solid-svg-icons';
-import { Button } from '@mui/material';
 import { React } from 'react';
 
 export default function Footer() {
@@ -20,8 +19,8 @@ export default function Footer() {
 
 function Icon({icon, link}) {
   return (
-    <Button variant='contained' href={link} target='_blank' size='large'>
-      <FontAwesomeIcon icon={icon} size='md '/>
-    </Button>
+    <button className='btn btn-primary' href={link} target='_blank'>
+      <FontAwesomeIcon icon={icon} size='lg'/>
+    </button>
   )
 }
