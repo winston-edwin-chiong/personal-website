@@ -1,11 +1,12 @@
 import { React } from 'react';
-
+import Footer from '../components/Footer'
 
 export default function Experience() {
 
   return (
     <>
-      <div>The experience page!</div>
+      <div className='flex justify-center items-center'>EXPERIENCE</div>
+      <Footer></Footer>
     </>
   )
 }
