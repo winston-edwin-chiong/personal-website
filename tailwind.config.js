@@ -22,12 +22,7 @@ module.exports = {
       {
         mytheme: {
           "primary": "#000000",
-          "primary-focus": "#H6h6h6",
           "primary-content": "#FFFFFF",
-          "secondary": "#f6d860",
-          "accent": "#37cdbe",
-          "neutral": "#3d4451",
-          "base-100": "#ffffff",
         },
       },
     ],

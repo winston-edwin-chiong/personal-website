@@ -3,11 +3,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithubAlt, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { faPhone, faFileLines } from '@fortawesome/free-solid-svg-icons';
+import Link from 'next/link';
 import { React } from 'react';
 
 export default function Footer() {
     return (  
-        <div className='flex space-x-4 justify-center pt-5 pb-4 px-3 children:py-1 children:px-2'>
+        <div className='flex space-x-4 justify-center pt-5 pb-4 px-3'>
           <Icon icon={faFileLines} link={"https://www.drive.google.com"}/>
           <Icon icon={faGithubAlt} link={"https://github.com/winston-edwin-chiong"}/>
           <Icon icon={faLinkedinIn} link={"https://www.linkedin.com/in/winstonechiong/"}/>
@@ -19,8 +20,10 @@ export default function Footer() {
 
 function Icon({icon, link}) {
   return (
-    <button className='btn btn-primary' href={link} target='_blank'>
-      <FontAwesomeIcon icon={icon} size='lg'/>
-    </button>
+    <Link href={link} target='_blank' className='py-1 px-1 sm:py-1 sm:px-2'>
+      <button className='btn btn-primary hover:bg-slate-100/[.1] transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300'>
+        <FontAwesomeIcon icon={icon} size='lg'/>
+      </button>
+    </Link>
   )
 }

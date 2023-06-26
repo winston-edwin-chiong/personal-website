@@ -15,13 +15,13 @@ export default function Home() {
       </div>  
       <div className='flex flex-col items-center mt-6 sm:flex-row sm:space-x-8 children:pb-6'>
         <Link href={"/about"}>
-          <button className='btn btn-primary tracking-widest'>About</button>
+          <button className='btn btn-primary tracking-widest hover:bg-slate-100/[.1] transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300'>About</button>
         </Link>
         <Link href={"/experience"}>
-          <button className='btn btn-primary tracking-widest'>Experience</button>
+          <button className='btn btn-primary tracking-widest hover:bg-slate-100/[.1] transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300'>Experience</button>
         </Link>
         <Link href={"/blog"}>
-          <button className='btn btn-primary tracking-widest'>Blog</button>
+          <button className='btn btn-primary tracking-widest hover:bg-slate-100/[.1] transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300'>Blog</button>
         </Link>
         </div>
     </main>

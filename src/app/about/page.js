@@ -20,7 +20,7 @@ export default function About() {
   <div className="flex flex-col min-h-screen">
     <main className="grid grid-cols-2 gap-4 flex-grow">
       <div className=''>
-        <img src='/images/ProfilePicture.JPEG' alt="Winston" className='h-auto max-w-full'></img>
+        <img src='/images/ProfilePicture.JPEG' alt="Winston" className='h-96 w-auto'></img>
       </div>
       <div className='text-center'>
         <h1>About Me</h1>
