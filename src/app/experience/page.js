@@ -5,20 +5,22 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import Link from 'next/link';
 
+
 export default function Experience() {
 
   return (
     <>
+      <a href='/'><div className='relative top-0 left-0 m-2'>HOME</div></a>
       <div className="flex flex-col min-h-screen mx-auto max-w-screen-2xl">
-        <div className='flex flex-col justify-start px-12 md:pt-20 md:pb-20 pt-12'>
-          <h1 className='text-center [word-spacing:10px] text-4xl tracking-[.25em] uppercase font-semibold pb-10'>Experience</h1>
+        <div className='flex flex-col justify-start mx-12 md:mt-20 md:mb-20 mt-12'>
+          <h1 className='text-center [word-spacing:10px] text-4xl tracking-[.25em] uppercase font-semibold mb-10'>Experience</h1>
           <Collapse title={"Projects"}>
             <ProjectContent title="slrpEV Dashboard"
               techStack={["Bootstrap", "Plotly Dash", "Python", "Celery", "Redis", "DynamoDB"]}
               iconPaths={["/icons/bootstrap_logo.svg", "/icons/plotly_logo.svg", "/icons/python_logo.svg", "/icons/celery_logo.png", "/icons/redis_logo.svg", "/icons/dynamodb_logo.svg"]}
               description={
                 <p className='text-sm md:text-base lg:text-lg'>
-                  Shit about the project goes here. I don't what to write so I'm going to write a paragraph about Walter White.
+                  Shit about the project goes here. I don't what to write so I'm going to write a paragraph about Walter White:
                   Walter White was an overqualified high school chemistry teacher before being diagnoed with terminal lung cancer.
                   Walter White subsequently made the decision to cook methamphetamine with his former student,
                   Jesse Pinkman, to provide for his family before he passes. Walter White became so good at his job, it no longer
@@ -32,7 +34,7 @@ export default function Experience() {
               iconPaths={[]}
               description={
                 <p className='text-sm md:text-base lg:text-lg'>
-                  Shit about the project goes here. I don't what to write so I'm going to write a paragraph about Walter White.
+                  Shit about the project goes here. I don't what to write so I'm going to write a paragraph about Walter White:
                   Walter White was an overqualified high school chemistry teacher before being diagnoed with terminal lung cancer.
                   Walter White subsequently made the decision to cook methamphetamine with his former student,
                   Jesse Pinkman, to provide for his family before he passes. Walter White became so good at his job, it no longer
@@ -42,9 +44,8 @@ export default function Experience() {
             >
             </ProjectContent>
           </Collapse>
-          <Collapse title={"Work"}>
-          </Collapse>
-          <Collapse title={"Courses"}>
+          <Collapse title={"Relevant Courses"}>
+            <CoursesContent />
           </Collapse>
         </div>
       </div>
@@ -55,17 +56,13 @@ export default function Experience() {
 
 
 function Collapse({ title, children }) {
-  const [isOpen, setIsOpen] = useState(false)
-
-  const handleClick = () => {
-    setIsOpen(!isOpen)
-  }
 
   return (
-    <div className='py-5 lg:py-10'>
-      <div tabIndex={0} className="collapse collapse-arrow">
-        <input type='checkbox' onClick={handleClick} />
-        <div className={`collapse-title text-3xl tracking-[.15em] transition ease-in-out duration-300 ${isOpen ? 'font-bold' : 'font-medium'}`}>
+    <div className='my-5 lg:my-10'>
+      <div tabIndex={0} className="collapse collapse-arrow py-4">
+        <input type='checkbox' className='peer' />
+        <div className="collapse-title text-2xl md:text-3xl tracking-[.15em] transition ease-in-out duration-300 font-medium peer-checked:font-bold
+         peer-checked:bg-slate-100/[.1] peer-checked:border-slate-100/[.5]">
           {title}
         </div>
         <div className="collapse-content">
@@ -78,34 +75,32 @@ function Collapse({ title, children }) {
 
 
 function ProjectContent({ title, techStack, iconPaths, description }) {
-  const [isOpen, setIsOpen] = useState(false)
-
-  const handleClick = () => {
-    setIsOpen(!isOpen)
-  }
 
   return (
     <>
-      <div tabIndex={0} className="collapse collapse-arrow" key={title}>
-        <input type='checkbox' onClick={handleClick} />
-        <div className={`collapse-title text-xl tracking-widest transition ease-in-out duration-300 ${isOpen ? 'font-bold' : 'font-medium'}`}>
-          {title}
-        </div>
-        <div className="collapse-content children:pl-6 children:py-3">
-          <div className='flex justify-between items-center'>
-            <p><span className='tracking-widest'>Technologies: </span><span className='italic'>{techStack.join(", ")}</span></p>
-            <Link href={"https://www.github.com/winston-edwin-chiong"} target='_blank' className='group/github'>
-              <button className='btn btn-primary'>
-                <FontAwesomeIcon icon={faGithub} size='xl' className='group-hover/github:scale-125 transition ease-in-out duration-300' />
-              </button>
-            </Link>
+      <div className='my-4'>
+        <div tabIndex={0} className="collapse collapse-arrow py-4" key={title}>
+          <input type='checkbox' className='peer' />
+          <div className="collapse-title text-lg md:text-xl tracking-widest transition ease-in-out duration-300 font-medium peer-checked:font-bold
+         peer-checked:bg-slate-100/[.1] border rounded-lg border-slate-100/[.1] peer-checked:border-slate-100/[.5]">
+            {title}
           </div>
-          <div className='flex flex-row justify-start children:px-2 items-center'>
-            {iconPaths.map((item, index) => (
-              <img key={index} src={item} className='h-4 md:h-7 w-auto'></img>
-            ))}
+          <div className="collapse-content children:pl-6 children:my-3">
+            <div className='flex justify-between items-center'>
+              <p><span className='tracking-widest'>Technologies: </span><span className='italic'>{techStack.join(", ")}</span></p>
+              <Link href={"https://www.github.com/winston-edwin-chiong"} target='_blank' className='group/github'>
+                <button className='btn text-white'>
+                  <FontAwesomeIcon icon={faGithub} size='xl' className='group-hover/github:scale-125 transition ease-in-out duration-300' />
+                </button>
+              </Link>
+            </div>
+            <div className='flex flex-row justify-start children:px-2 items-center'>
+              {iconPaths.map((path, index) => (
+                <img key={index} src={path} className='h-4 md:h-7 w-auto'></img>
+              ))}
+            </div>
+            {description}
           </div>
-          {description}
         </div>
       </div>
     </>
@@ -113,17 +108,34 @@ function ProjectContent({ title, techStack, iconPaths, description }) {
 }
 
 
-function WorkContent({ }) {
-  const [isOpen, setIsOpen] = useState(false)
+function CoursesContent({ }) {
 
-  const handleClick = () => {
-    setIsOpen(!isOpen)
-  }
+  const courses = [
+    { code: "CS 61A", title: "The Structure and Interpretation of Computer Programs", description: "Python, Scheme" },
+    { code: "CS 61B", title: "Data Structures and Algorithms", description: "Java" },
+    { code: "DATA 8", title: "Foundations of Data Science", description: "Python" },
+    { code: "DATA 140", title: "Probability for Data Science", description: "Probability Theory" },
+    { code: "DATA 100", title: "Principles & Techniques of Data Science", description: "Python, pandas, sklearn" },
+    { code: "CIVENG 191", title: "Civil and Environmental Engineering Systems Analysis", description: "MATLAB, Linear, Dynamic, and Nonlinear Programs" },
+    { code: "CIVENG 190", title: "Electric Mobility Engineering", description: "EV's, Batteries" },
+    { code: "CIVENG 167", title: "Engineering Project Management", description: "Construction Law" }
+  ]
 
   return (
     <>
-      <div>
-        Work goes here! Time for bed though.
+      <div className='my-4'>
+        {courses.map((course, index) => (
+          <div tabIndex={0} className="collapse collapse-arrow py-4" key={index}>
+            <input type='checkbox' className='peer' />
+            <div className="collapse-title transition ease-in-out duration-300 font-medium peer-checked:font-bold text-sm
+            peer-checked:bg-slate-100/[.1] border rounded-lg border-slate-100/[.1] peer-checked:border-slate-100/[.5]">
+              {course.code} - {course.title}
+            </div>
+            <div className="collapse-content text-sm my-2">
+              <div>{course.description}</div>
+            </div>
+          </div>
+        ))}
       </div>
     </>
   )

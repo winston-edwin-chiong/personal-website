@@ -37,6 +37,7 @@ module.exports = {
         mytheme: {
           "primary": "#000000",
           "primary-content": "#FFFFFF",
+          "primary-focus": "#FFFFFF"
         },
       },
     ],
