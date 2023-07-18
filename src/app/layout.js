@@ -1,7 +1,8 @@
-'use client'
 import './globals.css'
 import { Exo } from 'next/font/google'
 import React from 'react'
+import Footer from './components/Footer'
+import Navbar from './components/Navbar'
 
 const exo = Exo({ subsets: ['latin'] })
 
@@ -13,7 +14,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-        <body className={exo.className + " bg-black" + " text-white"}>{children}</body>
+      <body className={exo.className + " bg-primary" + " text-primary-content"} data-theme='dark'>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   )
 }

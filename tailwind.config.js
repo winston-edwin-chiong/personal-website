@@ -28,16 +28,27 @@ module.exports = {
         '4/5': "80%",
         '1/6': "16.666667%"
 
+      },
+      aspectRatio: {
+        '2/3': '2 / 3',
+        '4/3': '4 / 3'
       }
     },
   },
   daisyui: {
     themes: [
       {
-        mytheme: {
+        dark: {
           "primary": "#000000",
           "primary-content": "#FFFFFF",
-          "primary-focus": "#FFFFFF"
+          "primary-focus": "#FFFFFF",
+          "secondary-focus": "#F1F5F9"
+        },
+        light: {
+          "primary": "#FFFFFF",
+          "primary-content": "#000000",
+          "primary-focus": "#000000",
+          "secondary-focus": "#000000"
         },
       },
     ],
