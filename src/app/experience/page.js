@@ -7,7 +7,7 @@ export default function Experience() {
     <div className="flex flex-col min-h-screen mx-auto max-w-screen-2xl">
       <div className='flex flex-col justify-start mx-12 md:mt-20 md:mb-20 mt-12'>
         <h1 className='text-center [word-spacing:10px] text-4xl tracking-[.25em] uppercase font-semibold mb-10'>Experience</h1>
-        <h2 className='my-5 lg:my-10 text-2xl md:text-3xl tracking-[.15em] font-medium'>Projects</h2>
+        <h2 className='my-5 lg:my-10 text-2xl md:text-3xl tracking-[.15em] font-medium uppercase'>Projects</h2>
         <ProjectContent
           title="slrpEV Dashboard"
           techStack={["Bootstrap", "Plotly Dash", "Python", "Celery", "Redis", "DynamoDB"]}
@@ -24,8 +24,8 @@ export default function Experience() {
         />
         <ProjectContent
           title="This Website 😊"
-          techStack={["Tailwind", "Three.js", "Next.js", "React", "Javascript"]}
-          iconPaths={["/icons/tailwind_logo.svg", "/icons/three-js_logo.png", " /icons/next-js_logo.png", "icons/react_logo.png", "/icons/javascript_logo.png"]}
+          techStack={["Tailwind", "Three.js", "React", "Next.js", "Javascript"]}
+          iconPaths={["/icons/tailwind_logo.svg", "/icons/three-js_logo.png", "/icons/react_logo.png", "/icons/next-js_logo.png", "/icons/javascript_logo.png"]}
           description={
             <p className='text-sm md:text-base lg:text-lg'>
               Shit about the project goes here. I don't what to write so I'm going to write a paragraph about Walter White:
@@ -38,14 +38,14 @@ export default function Experience() {
         />
         <ProjectContent
           title="Cooking something up..."
-          techStack={["Caffeine", "$0.99 Ramen, Squats"]}
+          techStack={["Caffeine", "99¢ Ramen, Squats"]}
           iconPaths={["icons/cooking_logo.png"]}
           description={
             <p className='text-sm md:text-base lg:text-lg'>
               Working on it...
             </p>}
         />
-        <h2 className='my-5 lg:my-10 text-2xl md:text-3xl tracking-[.15em] font-medium'>Coursework</h2>
+        <h2 className='my-5 lg:my-10 text-2xl md:text-3xl tracking-[.15em] font-medium uppercase'>Coursework</h2>
         <CoursesContent />
       </div>
     </div>
@@ -100,22 +100,6 @@ function CoursesContent({ }) {
       )
       )}
     </div>
-    // <>
-    //   <div className='my-4'>
-    //     {courses.map((course, index) => (
-    //       <div tabIndex={0} className="collapse collapse-arrow py-4" key={index}>
-    //         <input type='checkbox' className='peer' />
-    //         <div className="collapse-title transition ease-in-out duration-300 font-medium peer-checked:font-bold text-sm
-    //         peer-checked:bg-secondary-focus/[.1] border rounded-lg border-secondary-focus/[.1] peer-checked:border-secondary-focus/[.5]">
-    //           {course.code} - {course.title}
-    //         </div>
-    //         <div className="collapse-content text-sm my-2">
-    //           <div>{course.description}</div>
-    //         </div>
-    //       </div>
-    //     ))}
-    //   </div>
-    // </>
   )
 }
 
