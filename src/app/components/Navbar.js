@@ -34,7 +34,7 @@ export default function Navbar() {
 function ThemeButton({ handleClick }) {
 
     return (
-        <label className="swap swap-rotate hover:scale-110 hover:-translate-y-1 duration-150">
+        <label className="swap swap-rotate hover:scale-110 hover:ease-in-out hover:-translate-y-1 duration-150">
             <input type="checkbox" onClick={handleClick} />
             <FontAwesomeIcon icon={faMoon} className="swap-on text-md md:text-xl" />
             <FontAwesomeIcon icon={faSun} className="swap-off text-md md:text-xl" />
@@ -45,7 +45,7 @@ function ThemeButton({ handleClick }) {
 function HomeButton({ atHome }) {
     return (
         <Link href="/">
-            {atHome ? <></> : <FontAwesomeIcon icon={faHouse} className="text-md md:text-xl hover:scale-110 hover:-translate-y-1 duration-150" />}
+            {atHome ? <></> : <FontAwesomeIcon icon={faHouse} className="text-md md:text-xl hover:scale-110 hover:ease-in-out hover:-translate-y-1 duration-150" />}
         </Link>
     )
 }
