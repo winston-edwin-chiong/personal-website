@@ -15,7 +15,7 @@ export default function PageWrapper({ children }) {
         variants={variants}
         initial="hidden"
         animate="enter"
-        exit="exit" // This doesn't work (it's a Next.js problem, not a Framer Motion problem)
+        exit="exit" // This doesn't work (it's a Next.js problem, not a Framer Motion problem) https://github.com/framer/motion/issues/1850
         transition={{ ease: "easeInOut", duration: 0.3 }}
       >
         {children}

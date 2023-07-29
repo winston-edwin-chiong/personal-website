@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import { usePathname } from "next/navigation";
 import PageWrapper from "./components/PageWrapper";
+import SpaceBackground from "./components/SpaceBackground";
 
 const exo = Exo({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
           className={exo.className + " bg-primary" + " text-primary-content"}
           data-theme="dark"
         >
+          <SpaceBackground />
           <Navbar />
             <PageWrapper key={usePathname()}>
               {children}

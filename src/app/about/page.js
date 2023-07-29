@@ -1,11 +1,40 @@
+"use client"
+import { useState } from "react"
+import { AnimatePresence, motion } from "framer-motion"
+
 export default function About() {
+
+  const[imageIndex, setImageIndex] = useState(0)
+
+  const images = [
+    '/images/Winston_Profile_Picture.JPEG', 
+    '/images/Winston_Profile_Picture_2.PNG', 
+    '/images/Winston_Profile_Picture_3.PNG'
+  ]
+
+  const changeImage = () => {
+    setImageIndex((imageIndex + 1) % images.length)
+  }
 
   return (
   <>
   <div className="flex flex-col min-h-screen mx-auto max-w-screen-2xl">
-    <main className="grid grid-cols-1 md:grid-cols-2 gap-4 flex-grow">
-      <div className="relative">
-        <img src='/images/Winston_Profile_Picture.JPEG' alt="Winston" className="h-full w-full object-cover object-top px-12 md:pt-36 md:pb-36 pt-12"></img>
+    <main className="grid grid-cols-1 lg:grid-cols-2 gap-4 flex-grow">
+      <div className="relative px-12 md:pt-36 md:pb-36 pt-12">
+        <AnimatePresence mode="wait">
+          <motion.img
+            key={imageIndex}
+            src={images[imageIndex]} 
+            alt="me :)" 
+            onClick={changeImage} 
+            className="h-full w-full object-cover object-top cursor-pointer"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ ease: "easeInOut", duration: 0.3 }}
+          >
+          </motion.img>
+        </AnimatePresence>
       </div>
       <div className='flex flex-col justify-start px-12 md:pt-20 md:pb-20 pt-12 text-xl tracking-wide'>
         <h1 className='text-center [word-spacing:10px] text-4xl tracking-[.25em] uppercase font-semibold pb-10'>About Me</h1>
