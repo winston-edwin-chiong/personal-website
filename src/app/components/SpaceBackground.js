@@ -1,5 +1,7 @@
-import React, { useRef, useEffect } from 'react';
-import * as THREE from 'three';
+"use client";
+import React, { useRef, useEffect } from "react";
+import * as THREE from "three";
+import { usePathname } from "next/navigation";
 
 const SpaceBackground = ({ children }) => {
   const containerRef = useRef(null);
@@ -20,20 +22,31 @@ const SpaceBackground = ({ children }) => {
       );
       camera.position.set(0, 0, 0);
 
+      // Obtain max height of page
+      var body = document.body,
+        html = document.documentElement;
+      var height = Math.max(
+        body.scrollHeight,
+        body.offsetHeight,
+        html.clientHeight,
+        html.scrollHeight,
+        html.offsetHeight
+      );
+
       // Create the renderer
       renderer = new THREE.WebGLRenderer({ alpha: true });
-      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setSize(window.innerWidth, height);
       containerRef.current.appendChild(renderer.domElement);
 
       // Create the stars
       const starsGeometry = new THREE.BufferGeometry();
       const starsMaterial = new THREE.PointsMaterial({
         color: 0xffffff,
-        size: 0.1,
+        size: 0.2,
       });
 
       const starsVertices = [];
-      for (let i = 0; i < 10000; i++) {
+      for (let i = 0; i < 20000; i++) {
         const x = (Math.random() - 0.5) * 2000;
         const y = (Math.random() - 0.5) * 2000;
         const z = (Math.random() - 0.5) * 2000;
@@ -41,12 +54,14 @@ const SpaceBackground = ({ children }) => {
       }
 
       starsGeometry.setAttribute(
-        'position',
+        "position",
         new THREE.Float32BufferAttribute(starsVertices, 3)
       );
 
       stars = new THREE.Points(starsGeometry, starsMaterial);
       scene.add(stars);
+
+      window.addEventListener("resize", onWindowResize, false);
 
       // Start animation
       animate();
@@ -64,6 +79,12 @@ const SpaceBackground = ({ children }) => {
     // Initialize the scene
     init();
 
+    function onWindowResize() {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    }
+
     // Clean up Three.js components when the component is unmounted
     return () => {
       cancelAnimationFrame(frameId);
@@ -72,10 +93,7 @@ const SpaceBackground = ({ children }) => {
     };
   }, []);
 
-  return (
-    <div ref={containerRef} style={{ width: '100%', height: '100vh', position: 'fixed', top: 0, left: 0 , zIndex: "-1"}}>
-    </div>
-  );
+  return <div ref={containerRef} className="fixed -z-10"></div>;
 };
 
 export default SpaceBackground;

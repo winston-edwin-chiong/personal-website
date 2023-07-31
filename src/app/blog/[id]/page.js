@@ -40,7 +40,7 @@ export default async function Page({ params }) {
 
     return (
         <>
-            <div className="flex flex-col min-h-screen mx-auto max-w-screen-lg">
+            <div className="flex flex-col flex-grow mx-auto max-w-screen-lg">
                 <div className='flex flex-col justify-center items-center my-5 md:my-10 children:my-3'>
                     <div className='text-3xl md:text-4xl  text-center font-bold'>{data.title}</div>
                     <div className='italic'>{formattedDate}</div>

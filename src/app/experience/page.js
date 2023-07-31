@@ -4,8 +4,8 @@ import Link from "next/link";
 
 export default function Experience() {
   return (
-    <div className="flex flex-col min-h-screen mx-auto max-w-screen-2xl">
-      <div className="flex flex-col justify-start mx-12 md:mt-20 md:mb-20 mt-12">
+    <div className="mx-auto max-w-screen-2xl">
+      <div className="flex flex-col justify-start mx-8 md:mx-12 mt-12 md:mt-20 md:mb-20">
         <h1 className="text-center [word-spacing:10px] text-4xl tracking-[.25em] uppercase font-semibold mb-10">
           Experience
         </h1>
@@ -30,6 +30,7 @@ export default function Experience() {
             "/icons/redis_logo.svg",
             "/icons/dynamodb_logo.svg",
           ]}
+          repository={"https://github.com/winston-edwin-chiong/slrpEV-dashboard"}
           description={
             <p className="text-sm md:text-base lg:text-lg">
               Shit about the project goes here. I don't what to write so I'm
@@ -72,7 +73,7 @@ export default function Experience() {
         />
         <ProjectContent
           title="Cooking something up..."
-          techStack={["Caffeine", "99¢ Ramen, Squats"]}
+          techStack={["Caffeine", "Oatmeal"]}
           iconPaths={["icons/cooking_logo.png"]}
           description={
             <p className="text-sm md:text-base lg:text-lg">Working on it...</p>
@@ -87,7 +88,7 @@ export default function Experience() {
   );
 }
 
-function ProjectContent({ title, techStack, iconPaths, description }) {
+function ProjectContent({ title, techStack, iconPaths, repository, description }) {
   return (
     <>
       <h3 className="text-lg md:text-xl tracking-widest my-4 underline">
@@ -100,7 +101,7 @@ function ProjectContent({ title, techStack, iconPaths, description }) {
             <span className="italic">{techStack.join(", ")}</span>
           </p>
           <Link
-            href={"https://www.github.com/winston-edwin-chiong"}
+            href={repository || "https://github.com/winston-edwin-chiong/"}
             target="_blank"
             className="group/github ml-2"
           >

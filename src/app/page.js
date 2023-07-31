@@ -1,5 +1,7 @@
 import { React } from 'react';
 import Link from 'next/link'
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
 
 
 export default function Home() {
@@ -7,8 +9,7 @@ export default function Home() {
   return (
 
     <>
-      <div className="flex flex-col min-h-screen">
-        <main className="flex flex-col items-center justify-center flex-grow">
+        <div className='flex flex-col flex-grow justify-center items-center'>
           <div className='text-4xl tracking-widest uppercase text-center [word-spacing:10px] px-10 sm:text-5xl'>
             Hi, I'm Winston!
           </div>
@@ -19,8 +20,7 @@ export default function Home() {
             <HomeNavButton href={"/song"} label={"Song"} />
             <HomeNavButton href={"/cat"} label={"Cat"} />
           </div>
-        </main>
-      </div>
+          </div>
     </>
   )
 }

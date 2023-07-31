@@ -1,10 +1,8 @@
-"use client";
 import "./globals.css";
 import { Exo } from "next/font/google";
 import React from "react";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import { usePathname } from "next/navigation";
 import PageWrapper from "./components/PageWrapper";
 import SpaceBackground from "./components/SpaceBackground";
 
@@ -18,17 +16,19 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-        <body
-          className={exo.className + " bg-primary" + " text-primary-content"}
-          data-theme="dark"
-        >
+      <body
+        className={exo.className + " bg-primary" + " text-primary-content"}
+        data-theme="dark"
+      >
+        <div className="flex flex-col h-screen">
           <SpaceBackground />
           <Navbar />
-            <PageWrapper key={usePathname()}>
-              {children}
-            </PageWrapper>
+          <PageWrapper>
+            {children}
+          </PageWrapper>
           <Footer />
-        </body>
+        </div>
+      </body>
     </html>
-  );  
+  );
 }
