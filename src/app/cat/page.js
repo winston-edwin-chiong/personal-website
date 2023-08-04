@@ -2,9 +2,10 @@
 import SpaceBackground from "../components/SpaceBackground";
 
 export default function Cat() {
+  
   return (
     <>
-      <div className="flex flex-col min-h-screen mx-auto max-w-screen-2xl"></div>
+      <div className="mx-auto max-w-screen-2xl"></div>
     </>
   );
 }

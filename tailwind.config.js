@@ -42,13 +42,15 @@ module.exports = {
           "primary": "#000000",
           "primary-content": "#FFFFFF",
           "primary-focus": "#FFFFFF",
-          "secondary-focus": "#F1F5F9"
+          "secondary-focus": "#F1F5F9",
+          "neutral": "#737373",
         },
         light: {
           "primary": "#FFFFFF",
           "primary-content": "#000000",
           "primary-focus": "#000000",
-          "secondary-focus": "#000000"
+          "secondary-focus": "#000000",
+          "neutral": "#737373",
         },
       },
     ],

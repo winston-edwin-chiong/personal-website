@@ -79,6 +79,7 @@ export default function Experience() {
             <p className="text-sm md:text-base lg:text-lg">Working on it...</p>
           }
         />
+        <hr className="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral to-transparent opacity-25 dark:opacity-100" />
         <h2 className="my-5 lg:my-10 text-2xl md:text-3xl tracking-[.15em] font-medium uppercase">
           Coursework
         </h2>
@@ -88,15 +89,20 @@ export default function Experience() {
   );
 }
 
+
 function ProjectContent({ title, techStack, iconPaths, repository, description }) {
   return (
     <>
-      <h3 className="text-lg md:text-xl tracking-widest my-4 underline">
-        {title}
-      </h3>
+    <div className="mb-5">
+      <div className="relative">
+        <h3 className="text-lg md:text-xl tracking-widest mt-4">
+          {title}
+        </h3>
+        <div class="absolute bottom-0 left-4 w-full md:w-2/4 h-px bg-neutral"></div>
+      </div>
       <div className="children:ml-6 children:my-3">
         <div className="flex justify-between items-center">
-          <p>
+          <p className="text-sm md:text-base lg:text-lg">
             <span className="tracking-widest">Technologies: </span>
             <span className="italic">{techStack.join(", ")}</span>
           </p>
@@ -121,9 +127,11 @@ function ProjectContent({ title, techStack, iconPaths, repository, description }
         </div>
         {description}
       </div>
+    </div>
     </>
   );
 }
+
 
 function CoursesContent({}) {
   const courses = [

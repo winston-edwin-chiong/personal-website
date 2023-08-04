@@ -40,7 +40,7 @@ export default function About() {
           </motion.img>
         </AnimatePresence>
       </div>
-      <div className='flex flex-col justify-start px-12 md:pt-20 md:pb-20 pt-12 text-xl tracking-wide'>
+      <div className='flex flex-col justify-start px-12 lg:pt-20 md:pb-20 pt-0 text-xl tracking-wide'>
         <h1 className='text-center [word-spacing:10px] text-4xl tracking-[.25em] uppercase font-semibold pb-10'>About Me</h1>
         <div>
         <p>
