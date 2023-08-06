@@ -1,11 +1,12 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Experience() {
   return (
     <div className="mx-auto max-w-screen-2xl">
-      <div className="flex flex-col justify-start mx-8 md:mx-12 mt-12 md:mt-20 md:mb-20">
+      <div className="flex flex-col justify-start mx-10 md:mx-20 mt-12 md:mt-20 md:mb-20">
         <h1 className="text-center [word-spacing:10px] text-4xl tracking-[.25em] uppercase font-semibold mb-10">
           Experience
         </h1>
@@ -30,18 +31,20 @@ export default function Experience() {
             "/icons/redis_logo.svg",
             "/icons/dynamodb_logo.svg",
           ]}
-          repository={"https://github.com/winston-edwin-chiong/slrpEV-dashboard"}
+          repository={
+            "https://github.com/winston-edwin-chiong/slrpEV-dashboard"
+          }
           description={
             <p className="text-sm md:text-base lg:text-lg">
-              Shit about the project goes here. I don't what to write so I'm
+              Shit about the project goes here. I don&#39;t what to write so I&#39;m
               going to write a paragraph about Walter White: Walter White was an
               overqualified high school chemistry teacher before being diagnoed
               with terminal lung cancer. Walter White subsequently made the
               decision to cook methamphetamine with his former student, Jesse
               Pinkman, to provide for his family before he passes. Walter White
               became so good at his job, it no longer became a means for
-              financial security; cooking methamphetamine became Walter White's
-              life purpose, one of the few aspects of Walter's life where he did
+              financial security; cooking methamphetamine became Walter White&#39;s
+              life purpose, one of the few aspects of Walter&#39;s life where he did
               not feel like a failure.
             </p>
           }
@@ -58,15 +61,15 @@ export default function Experience() {
           ]}
           description={
             <p className="text-sm md:text-base lg:text-lg">
-              Shit about the project goes here. I don't what to write so I'm
+              Shit about the project goes here. I don&#39;t what to write so I&#39;m
               going to write a paragraph about Walter White: Walter White was an
               overqualified high school chemistry teacher before being diagnoed
               with terminal lung cancer. Walter White subsequently made the
               decision to cook methamphetamine with his former student, Jesse
               Pinkman, to provide for his family before he passes. Walter White
               became so good at his job, it no longer became a means for
-              financial security; cooking methamphetamine became Walter White's
-              life purpose, one of the few aspects of Walter's life where he did
+              financial security; cooking methamphetamine became Walter White&#39;s
+              life purpose, one of the few aspects of Walter&#39;s life where he did
               not feel like a failure.
             </p>
           }
@@ -89,49 +92,51 @@ export default function Experience() {
   );
 }
 
-
-function ProjectContent({ title, techStack, iconPaths, repository, description }) {
+function ProjectContent({
+  title,
+  techStack,
+  iconPaths,
+  repository,
+  description,
+}) {
   return (
     <>
-    <div className="mb-5">
-      <div className="relative">
-        <h3 className="text-lg md:text-xl tracking-widest mt-4">
-          {title}
-        </h3>
-        <div class="absolute bottom-0 left-4 w-full md:w-2/4 h-px bg-neutral"></div>
-      </div>
-      <div className="children:ml-6 children:my-3">
-        <div className="flex justify-between items-center">
-          <p className="text-sm md:text-base lg:text-lg">
-            <span className="tracking-widest">Technologies: </span>
-            <span className="italic">{techStack.join(", ")}</span>
-          </p>
-          <Link
-            href={repository || "https://github.com/winston-edwin-chiong/"}
-            target="_blank"
-            className="group/github ml-2"
-          >
-            <button>
-              <FontAwesomeIcon
-                icon={faGithub}
-                size="xl"
-                className="group-hover/github:scale-125 transition ease-in-out duration-300"
-              />
-            </button>
-          </Link>
+      <div className="mb-5">
+        <div className="relative">
+          <h3 className="text-lg md:text-xl tracking-widest mt-4">{title}</h3>
+          <div class="absolute bottom-0 left-4 w-full md:w-2/4 h-px bg-neutral"></div>
         </div>
-        <div className="flex flex-row justify-start children:mx-2 items-center">
-          {iconPaths.map((path, index) => (
-            <img key={index} src={path} className="h-4 md:h-7 w-auto"></img>
-          ))}
+        <div className="children:ml-6 children:my-3">
+          <div className="flex justify-between items-center">
+            <p className="text-sm md:text-base lg:text-lg">
+              <span className="tracking-widest">Technologies: </span>
+              <span className="italic">{techStack.join(", ")}</span>
+            </p>
+            <Link
+              href={repository || "https://github.com/winston-edwin-chiong/"}
+              target="_blank"
+              className="group/github ml-2"
+            >
+              <button>
+                <FontAwesomeIcon
+                  icon={faGithub}
+                  size="xl"
+                  className="group-hover/github:scale-125 transition ease-in-out duration-300"
+                />
+              </button>
+            </Link>
+          </div>
+          <div className="flex flex-row justify-start children:mx-2 items-center">
+            {iconPaths.map((path, index) => (
+              <Image key={index} src={path} alt="_" className="h-4 md:h-7 w-auto"></Image>
+            ))}
+          </div>
+          {description}
         </div>
-        {description}
       </div>
-    </div>
     </>
   );
 }
-
 
 function CoursesContent({}) {
   const courses = [
@@ -180,8 +185,8 @@ function CoursesContent({}) {
   return (
     <div className="pl-6 children:my-4">
       {courses.map((course, index) => (
-        <div>
-          <ul key={index}>
+        <div key={index}>
+          <ul>
             {course.code} - {course.title}
           </ul>
           <div className="italic text-xs">{course.description}</div>
