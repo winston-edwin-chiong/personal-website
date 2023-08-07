@@ -21,7 +21,6 @@ export default function RootLayout({ children }) {
         data-theme="dark"
       >
         <div className="flex flex-col h-screen">
-          <SpaceBackground />
           <Navbar />
           <PageWrapper>
             {children}

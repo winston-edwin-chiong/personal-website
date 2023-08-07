@@ -32,11 +32,17 @@ export default function Experience() {
             "/icons/dynamodb_logo.svg",
           ]}
           repository={
-            "https://github.com/winston-edwin-chiong/slrpEV-dashboard"
+            "https://github.com/winston-edwin-chiong/slrpEV-data-dashboard"
           }
           description={
             <p className="text-sm md:text-base lg:text-lg">
-              Project desc.
+              • Developed a data dashboard using Plotly Dash, providing real-time visualization and 3 years of historical on-campus EV power and
+              energy consumption data.<br />
+              • Integrated AWS DynamoDB as the backend database and leveraged Redis as a broker and caching layer. Frontend built with DashI&#39;s
+              HTML library and the Bootstrap framework.<br />
+              • Created data pipelines with sklearn. Implemented task queuing and cron jobs with PythonI&#39;s Celery library, enabling hourly asynchronous
+              processing of data querying and usage forecasts, and bi-weekly hyperparameter cross-validation.
+              Employed k-NN and ARIMA models to generate forecasts of EV power and energy consumption patterns.
             </p>
           }
         />
@@ -52,16 +58,8 @@ export default function Experience() {
           ]}
           description={
             <p className="text-sm md:text-base lg:text-lg">
-              Shit about the project goes here. I don&#39;t what to write so I&#39;m
-              going to write a paragraph about Walter White: Walter White was an
-              overqualified high school chemistry teacher before being diagnoed
-              with terminal lung cancer. Walter White subsequently made the
-              decision to cook methamphetamine with his former student, Jesse
-              Pinkman, to provide for his family before he passes. Walter White
-              became so good at his job, it no longer became a means for
-              financial security; cooking methamphetamine became Walter White&#39;s
-              life purpose, one of the few aspects of Walter&#39;s life where he did
-              not feel like a failure.
+              • Developed this website using React, Next.js, and Tailwind CSS.<br />
+              • Implemented a 3D space background with Three.js and WebGL. Might do some more of this in the &#34;Cat&#34; and &#34;Song&#34; pages.
             </p>
           }
         />

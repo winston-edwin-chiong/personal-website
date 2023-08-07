@@ -44,7 +44,7 @@ export default function About() {
           Hi, my name is Winston and I&#39;m a senior @ UC Berkeley studying civil engineering, computer science, and data science! 
         </p>
         <p className='pt-5'>
-          bio goes here!
+          :D
         </p>
         </div>
       </div>
