@@ -1,10 +1,12 @@
 import { React } from "react";
 import Link from "next/link";
 import AnimateWinston from "./components/AnimateWinston";
+import SpaceBackground from "./components/SpaceBackground";
 
 export default function Home() {
   return (
     <>
+      <SpaceBackground />
       <div className="flex flex-col flex-grow justify-center items-center">
         <div className="text-4xl tracking-widest uppercase text-center [word-spacing:10px] px-10 sm:text-5xl">
           <AnimateWinston text={"Hi I'm Winston!"} />
