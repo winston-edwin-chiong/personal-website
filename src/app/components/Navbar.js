@@ -8,7 +8,7 @@ import { faSun, faMoon, faHouse } from "@fortawesome/free-solid-svg-icons";
 export default function Navbar() {
     const [theme, setTheme] = useState(
         typeof window !== "undefined" ?
-            (localStorage.getItem("theme") ? localStorage.getItem("theme") : "light") : null
+            (localStorage.getItem("theme") ? localStorage.getItem("theme") : "dark") : null
     );
     const pathname = usePathname()
 
