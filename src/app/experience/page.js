@@ -59,7 +59,7 @@ export default function Experience() {
           description={
             <p className="text-sm md:text-base lg:text-lg">
               • Developed this website using React, Next.js, and Tailwind CSS.<br />
-              • Implemented a 3D space background with Three.js and WebGL. Might do some more of this in the "Cat" and "Song" pages.
+              • Implemented a 3D space background with Three.js and WebGL. Might do some more of this in the &#34;Cat&#34; and &#34;Song&#34; pages.
             </p>
           }
         />
