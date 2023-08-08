@@ -36,11 +36,11 @@ function PostPreview({ id, href, title, date, hovered, handleHover }) {
     return (
         <>
             <div className={`flex justify-between items-center transition-all ease-in-out duration-125 ${hovered ? 'opacity-50' : ""}`}>
-                <Link href={`/blog/${href}`} className="tracking-widest hover:font-bold p-4"
+                <Link href={`/blog/${href}`} className="tracking-widest hover:font-bold px-4 py-1"
                     onMouseEnter={() => handleHover(id)}
                     onMouseLeave={() => handleHover(null)}
                 >
-                    <h2 className='text-lg md:text-xl'>{title}</h2>
+                    <h2 className='text-sm md:text-base'>{title}</h2>
                 </Link>
                 <time className='italic'>{date}</time>
             </div>

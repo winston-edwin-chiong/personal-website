@@ -1,5 +1,5 @@
 
-export default function Cat() {
+export default function Song() {
   
   return (
     <>
