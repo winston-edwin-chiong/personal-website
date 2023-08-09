@@ -40,12 +40,11 @@ export default function About() {
       <div className='flex flex-col justify-start px-12 lg:pt-20 md:pb-20 pt-0 text-xl tracking-wide'>
         <h1 className='text-center [word-spacing:10px] text-4xl tracking-[.25em] uppercase font-semibold pb-10'>About Me</h1>
         <div>
-        <p>
-          Hi, my name is Winston and I&#39;m a senior @ UC Berkeley studying civil engineering, computer science, and data science! 
-        </p>
-        <p className='pt-5'>
-          :D
-        </p>
+        <span>
+          Hi, my name is Winston!<br/><br/>
+          I&#39;m a senior @ UC Berkeley studying civil engineering, and informally, computer science and data science!<br/><br/>
+          I grew up in 🌉 San Francisco's Ingelside neighborhood and later made a quick trip across the bay to Berkeley after finishing at the City College of San Francisco.<br/><br/>
+        </span>
         </div>
       </div>
     </main>
