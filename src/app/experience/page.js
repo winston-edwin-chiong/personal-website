@@ -23,7 +23,7 @@ export default function Experience() {
               <p className="text-sm md:text-base lg:text-lg">
                 A data dashboard for the EV chargers at UC Berkeley.
                 <br />
-                Five minute, hourly, daily and monthly charging data + forecasts. Slide into my DM's for access (data privacy concerns).
+                Five minute, hourly, daily and monthly charging data + forecasts. Slide into my DM&#39;s for access (data privacy concerns).
                 <br />
               </p>
             }
