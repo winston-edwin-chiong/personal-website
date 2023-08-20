@@ -15,14 +15,15 @@ export default function Experience() {
         <div className="grid gap-16 lg:gap-20 lg:grid-cols-2">
           <ProjectContent
             title="slrpEV Dashboard⚡"
-            techStack={["Bootstrap", "Plotly Dash", "Python", "Celery", "Redis", "DynamoDB",]}
-            iconPaths={["/icons/bootstrap_logo.svg", "/icons/plotly_logo.svg", "/icons/python_logo.svg", "/icons/celery_logo.png", "/icons/redis_logo.svg", "/icons/dynamodb_logo.svg",]}
+            techStack={["Bootstrap", "Plotly Dash", "Python", "Redis", "Modal", "DynamoDB",]}
+            iconPaths={["https://getbootstrap.com/favicon.ico", "https://dash.plotly.com/assets/favicon.ico", "https://www.python.org/favicon.ico", "https://redis.com/favicon.ico", "https://modal.com/assets/favicon.svg", "https://whatthelogo.com/storage/logos/aws-dynamodb-274465.webp",]}
             repository={ "https://github.com/winston-edwin-chiong/slrpEV-data-dashboard" }
+            link={ "https://slrpev-data-dashboard.onrender.com/" }
             description={
               <p className="text-sm md:text-base lg:text-lg">
                 A data dashboard for the EV chargers at UC Berkeley.
                 <br />
-                Five minute, hourly, daily and monthly charging data + forecasts. 
+                Five minute, hourly, daily and monthly charging data + forecasts. Slide into my DM's for access (data privacy concerns).
                 <br />
               </p>
             }
@@ -30,12 +31,12 @@ export default function Experience() {
           <ProjectContent
             title="This Website😊"
             techStack={["Tailwind CSS", "Three.js", "React", "Next.js", "Javascript"]}
-            iconPaths={["/icons/tailwind_logo.svg", "/icons/three-js_logo.png", "/icons/react_logo.png", "/icons/next-js_logo.png", "/icons/javascript_logo.png",]}
+            iconPaths={["https://tailwindcss.com/favicons/favicon-32x32.png?v=3", "https://global.discourse-cdn.com/standard17/uploads/threejs/original/2X/e/e4f86d2200d2d35c30f7b1494e96b9595ebc2751.png", "https://react.dev/favicon.ico", "https://nextjs.org/favicon.ico", "https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg",]}
             repository={ "https://github.com/winston-edwin-chiong/personal-website" }
             link={ "https://winstonchiong.com" }
             description={
               <p className="text-sm md:text-base lg:text-lg">
-                My home on the interwebs🕸️. 
+                My home on the interwebs 🕸️. 
                 <br />
                 Comes with a 3D space background made with Three.js.
                 Might do some more of this in the &#34;Cat&#34; and &#34;Song&#34;
@@ -84,7 +85,7 @@ function ProjectContent({title, techStack, iconPaths, repository, description, l
         hover:shadow-[12px_-6px_0px_1px_var(--neutral),20px_-10px_0px_1px_var(--primary-content)]
         md:hover:shadow-[24px_-12px_0px_1px_var(--neutral),40px_-20px_0px_1px_var(--primary-content)]">
         <div className="relative">
-          <a href={link || "javascript:void(0)"} target="_blank">
+          <a href={link || "https://github.com/winston-edwin-chiong"} target="_blank">
              <h3 className="inline-block my-1 px-2 py-1 text-lg md:text-xl tracking-widest font-semibold mt-4 rounded-xl
               transition ease-in-out hover:bg-neutral hover:bg-opacity-60">{title}</h3>
           </a>
