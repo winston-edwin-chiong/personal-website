@@ -11,10 +11,17 @@ const variants = {
 }
 
 export default function PageWrapper({ children }) {
+
+
+  const backgrounds = {
+    "/": <SpaceBackground />,
+    "/cat": <SpinningCube />,
+    "/song": <SpinningCube />
+  }
+
   return (
     <>
-    {/* {usePathname() === "/" ? <SpaceBackground /> : <></>} */}
-    {getBackground()}
+    {backgrounds[usePathname()]}
     <AnimatePresence mode="wait" key={usePathname()}>
       <motion.div
         variants={variants}
@@ -29,12 +36,4 @@ export default function PageWrapper({ children }) {
     </AnimatePresence>
     </>
   );
-}
-
-function getBackground() {
-    if (usePathname() === "/") {
-      return <SpaceBackground />
-    } else if (usePathname() === "/cat" || usePathname() === "/song") {
-      return <SpinningCube />
-  }
 }
