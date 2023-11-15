@@ -4,7 +4,6 @@ import React from "react";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import PageWrapper from "./components/PageWrapper";
-import SpaceBackground from "./components/SpaceBackground";
 
 const exo = Exo({ subsets: ["latin"] });
 

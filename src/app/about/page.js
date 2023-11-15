@@ -1,6 +1,7 @@
 "use client"
 import { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
+import Image from "next/image"
 
 export default function About() {
 
@@ -20,21 +21,29 @@ export default function About() {
   return (
   <>
   <div className="mx-auto md:px-20 lg:px-24 max-w-screen-xl">
-    <main className="grid grid-cols-1 lg:grid-cols-2 gap-4 flex-grow">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 flex-grow">
       <div className="relative px-12 md:pt-36 md:pb-36 pt-12">
         <AnimatePresence mode="wait">
-          <motion.img
+          <motion.div
             key={imageIndex}
-            src={images[imageIndex]} 
-            alt="me :)" 
-            onClick={changeImage} 
-            className="w-full object-cover object-top cursor-pointer"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ ease: "easeInOut", duration: 0.15 }}
           >
-          </motion.img>
+            <Image
+                key={imageIndex}
+                src={images[imageIndex]} 
+                alt="me :)" 
+                width={500} // width only matters up to a certain point, I think it's because the outer div sets aspect ratio
+                height={250} // this honestly doesn't matter, I think it's because the outer div sets aspect ratio
+                sizes="100vw"
+                onClick={changeImage} 
+                className="cursor-pointer"
+                priority={true}
+              >
+            </Image>
+          </motion.div>
         </AnimatePresence>
       </div>
       <div className='flex flex-col justify-start px-12 lg:pt-20 md:pb-20 pt-0 text-xl tracking-wide'>
@@ -47,7 +56,7 @@ export default function About() {
         </span>
         </div>
       </div>
-    </main>
+    </div>
   </div>
   </>
   )

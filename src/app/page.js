@@ -1,6 +1,6 @@
 import { React } from "react";
 import Link from "next/link";
-import AnimateWinston from "./components/AnimateWinston";
+import AnimatedWinston from "./components/AnimatedWinston";
 import SpaceBackground from "./components/SpaceBackground";
 
 export default function Home() {
@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <div className="flex flex-col flex-grow justify-center items-center">
         <div className="text-4xl tracking-widest uppercase text-center [word-spacing:10px] px-10 sm:text-5xl">
-          <AnimateWinston text={"Hi I'm Winston!"} />
+          <AnimatedWinston />
         </div>
         <div className="flex flex-col items-center mt-6 sm:flex-row sm:space-x-8 children:pb-6">
           <HomeNavButton href={"/about"} label={"About"} />

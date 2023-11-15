@@ -1,0 +1,54 @@
+{
+    "courses": [
+        {
+            "code": "CS 61A",
+            "title": "The Structure and Interpretation of Computer Programs",
+            "description": ""
+        },
+        {
+            "code": "CS 61B",
+            "title": "Data Structures and Algorithms",
+            "description": ""
+        },
+        {
+            "code": "CS 61C",
+            "title": "Machine Structures",
+            "description": ""
+        },
+        {
+            "code": "CS 198",
+            "title": "Linux System Administration",
+            "description": ""
+        },
+        {
+            "code": "DATA 8",
+            "title": "Foundations of Data Science",
+            "description": ""
+        },
+        {
+            "code": "DATA 140",
+            "title": "Probability for Data Science",
+            "description": ""
+        },
+        {
+            "code": "DATA 100",
+            "title": "Principles & Techniques of Data Science",
+            "description": ""
+        },
+        {
+            "code": "CIVENG 191",
+            "title": "Civil and Environmental Engineering Systems Analysis",
+            "description": ""
+        },
+        {
+            "code": "CIVENG 190",
+            "title": "Electric Mobility Engineering",
+            "description": ""
+        },
+        {
+            "code": "CIVENG 167",
+            "title": "Engineering Project Management",
+            "description": ""
+        }
+    ]
+}

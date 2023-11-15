@@ -7,7 +7,7 @@ import Link from 'next/link';
 export default function Footer() {
     return (  
         <div className='flex space-x-4 justify-center pt-5 pb-4 px-3'>
-          <Icon icon={faFileLines} link={"https://drive.google.com/file/d/1rwQ4FUuSHJDMOcl7toc1LffgPebBD4d5/view?usp=drive_link"}/>
+          <Icon icon={faFileLines} link={"/resume"}/>
           <Icon icon={faGithubAlt} link={"https://github.com/winston-edwin-chiong"}/>
           <Icon icon={faLinkedinIn} link={"https://www.linkedin.com/in/winstonechiong/"}/>
           <Icon icon={faEnvelope} link={"mailto: winstonchiong@berkeley.edu"}/>
