@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useEffect, useContext, useState } from "react";
+import { useRef, useEffect, useContext, useState } from "react";
 import * as THREE from "three";
 import MyThemeContext from "../contexts/ThemeContext";
 

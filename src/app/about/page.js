@@ -39,7 +39,7 @@ export default function About() {
                 height={250} // this honestly doesn't matter, I think it's because the outer div sets aspect ratio
                 sizes="100vw"
                 onClick={changeImage} 
-                className="cursor-pointer"
+                className="cursor-pointer rounded-lg"
                 priority={true}
               >
             </Image>

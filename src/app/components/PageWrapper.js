@@ -2,6 +2,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import SpaceBackground from "./SpaceBackground";
+import SpinningCube from "./SpinningCube";
 
 const variants = {
   hidden: { opacity: 0 },
@@ -12,7 +13,8 @@ const variants = {
 export default function PageWrapper({ children }) {
   return (
     <>
-    {usePathname() === "/" ? <SpaceBackground /> : <></>}
+    {/* {usePathname() === "/" ? <SpaceBackground /> : <></>} */}
+    {getBackground()}
     <AnimatePresence mode="wait" key={usePathname()}>
       <motion.div
         variants={variants}
@@ -29,12 +31,10 @@ export default function PageWrapper({ children }) {
   );
 }
 
-function getBackground({ pathname }) {
-  console.log(pathname)
-    if (pathname === "/") {
-      console.log("path is /")
+function getBackground() {
+    if (usePathname() === "/") {
       return <SpaceBackground />
-    } else {
-      return <></>
+    } else if (usePathname() === "/cat" || usePathname() === "/song") {
+      return <SpinningCube />
   }
 }
