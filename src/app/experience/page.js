@@ -102,7 +102,7 @@ function ProjectContent({title, techStack, iconPaths, repository, description, l
           <div className="flex flex-row justify-start children:mx-2 items-center">
             {iconPaths.map((path, index) => (
               <div key={index} className="w-4 md:w-7 h-4 md:h-7 relative">
-                <Image key={index} src={path} alt="_" fill={true} className="object-contain"></Image>
+                <Image key={index} src={path} alt="_" height={28} width={28} className="object-contain"></Image>
               </div>
             ))}
           </div>

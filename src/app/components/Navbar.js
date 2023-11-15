@@ -1,26 +1,16 @@
 "use client"
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faMoon, faHouse } from "@fortawesome/free-solid-svg-icons";
+import MyThemeContext from  "../contexts/ThemeContext"
 
 export default function Navbar() {
-    const [theme, setTheme] = useState(
-        typeof window !== "undefined" ?
-            (localStorage.getItem("theme") ? localStorage.getItem("theme") : "dark") : null
-    );
+    const themeContext = useContext(MyThemeContext)
     const pathname = usePathname()
 
-    const handleClick = () => {
-        (theme == 'dark') ? setTheme('light') : setTheme('dark')
-    }
-
-    useEffect(() => {
-        localStorage.setItem("theme", theme);
-        const localTheme = localStorage.getItem("theme");
-        document.querySelector("body").setAttribute("data-theme", localTheme)
-    }, [theme]);
+    const handleClick = () => {themeContext.toggleThemeHandler()}
 
     return (
         <div className='flex space-x-4 justify-between pt-5 pb-4 px-5'>

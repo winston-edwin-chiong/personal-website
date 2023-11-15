@@ -26,7 +26,7 @@ export default function AnimatedWinston() {
   useEffect(() => {
     const controls = animate(count, text.length, {
       type: "tween",
-      duration: 2.5,
+      duration: 2,
       ease: "easeInOut",
       onComplete: () => (
         // Hide blinking cursor after 2 seconds

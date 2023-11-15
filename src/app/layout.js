@@ -4,6 +4,7 @@ import React from "react";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import PageWrapper from "./components/PageWrapper";
+import { MyThemeContextProvider } from "./contexts/ThemeContext";
 
 const exo = Exo({ subsets: ["latin"] });
 
@@ -15,6 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <MyThemeContextProvider>
       <body
         className={exo.className + " bg-primary" + " text-primary-content"}
         data-theme="dark"
@@ -27,6 +29,7 @@ export default function RootLayout({ children }) {
           <Footer />
         </div>
       </body>
+      </MyThemeContextProvider>
     </html>
   );
 }

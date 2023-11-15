@@ -1,7 +1,6 @@
 import { React } from "react";
 import Link from "next/link";
 import AnimatedWinston from "./components/AnimatedWinston";
-import SpaceBackground from "./components/SpaceBackground";
 
 export default function Home() {
   return (

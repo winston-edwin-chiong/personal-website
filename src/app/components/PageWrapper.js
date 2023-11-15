@@ -10,8 +10,6 @@ const variants = {
 }
 
 export default function PageWrapper({ children }) {
-
-
   return (
     <>
     {usePathname() === "/" ? <SpaceBackground /> : <></>}

@@ -1,9 +1,11 @@
 "use client";
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useContext, useState } from "react";
 import * as THREE from "three";
+import MyThemeContext from "../contexts/ThemeContext";
 
 const SpaceBackground = () => {
   const containerRef = useRef(null);
+  const themeContext = useContext(MyThemeContext)
 
   useEffect(() => {
     let scene, camera, renderer, geometry, stars
@@ -36,8 +38,9 @@ const SpaceBackground = () => {
       }
   
       geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
-  
-      stars = new THREE.Points(geometry, new THREE.PointsMaterial({color: 0xFFFFFF, size: 0.3}));
+      stars = new THREE.Points(geometry, new THREE.PointsMaterial({
+        color: themeContext.theme == "dark" ? 0xFFFFFF : 0x000000, 
+        size: themeContext.theme == "dark" ? 0.3 : 0.6}));
       scene.add(stars);
 
       animate();
@@ -73,9 +76,9 @@ const SpaceBackground = () => {
     init();
 
 
-  }, []);
+  }, [themeContext.theme]);
 
-  return <div ref={containerRef} className="fixed -z-10"></div>;
+  return <div key={themeContext.theme} ref={containerRef} className="fixed -z-10"></div>;
 };
 
 export default SpaceBackground;

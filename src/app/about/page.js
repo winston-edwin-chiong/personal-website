@@ -22,7 +22,7 @@ export default function About() {
   <>
   <div className="mx-auto md:px-20 lg:px-24 max-w-screen-xl">
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 flex-grow">
-      <div className="relative px-12 md:pt-36 md:pb-36 pt-12">
+      <div className="flex justify-center relative px-12 md:pt-36 md:pb-36 pt-12">
         <AnimatePresence mode="wait">
           <motion.div
             key={imageIndex}
