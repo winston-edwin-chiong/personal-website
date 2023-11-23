@@ -22,7 +22,7 @@ export default function About() {
   <>
   <div className="mx-auto md:px-20 lg:px-24 max-w-screen-xl">
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 flex-grow">
-      <div className="flex justify-center relative px-12 md:pt-36 md:pb-36 pt-12">
+      <div className="flex justify-center relative px-12 md:pt-36 md:pb-20 pb-10 pt-12">
         <AnimatePresence mode="wait">
           <motion.div
             key={imageIndex}
@@ -39,7 +39,7 @@ export default function About() {
                 height={250} // this honestly doesn't matter, I think it's because the outer div sets aspect ratio
                 sizes="100vw"
                 onClick={changeImage} 
-                className="cursor-pointer rounded-lg"
+                className="cursor-pointer rounded-md"
                 priority={true}
               >
             </Image>
@@ -50,9 +50,9 @@ export default function About() {
         <h1 className='text-center [word-spacing:10px] text-4xl tracking-[.25em] uppercase font-semibold pb-10'>About Me</h1>
         <div>
         <span>
-          Hi, my name is Winston!<br/><br/>
-          I&#39;m a senior @ UC Berkeley studying civil engineering, and informally, computer science and data science!<br/><br/>
-          I grew up in 🌉 San Francisco&#39;s Ingelside neighborhood and later made a quick trip across the bay to Berkeley after finishing at the City College of San Francisco.<br/><br/>
+          {"Hi, my name is Winston!"}<br/><br/>
+          {"I'm a senior @ UC Berkeley studying civil engineering, and informally, computer science and data science!"}<br/><br/>
+          {"I grew up in 🌉 San Francisco's Ingelside neighborhood and later made a quick trip across the bay to Berkeley after finishing at the City College of San Francisco."}<br/><br/>
         </span>
         </div>
       </div>
