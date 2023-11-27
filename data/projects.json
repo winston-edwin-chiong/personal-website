@@ -3,11 +3,12 @@
     [
         {
             "title": "slrpEV Dashboard⚡",
-            "techStack": ["Bootstrap", "Plotly Dash", "Python", "Redis", "Modal", "AWS DynamoDB"],
+            "techStack": ["Bootstrap", "Plotly Dash", "Python", "FastAPI", "Redis", "Modal", "AWS DynamoDB"],
             "iconPaths": [
                 "https://getbootstrap.com/favicon.ico", 
                 "https://dash.plotly.com/assets/favicon.ico", 
                 "https://www.python.org/favicon.ico", 
+                "https://codeahoy.com/assets/images/compare/python-frameworks/fastapi-logo.png",
                 "https://redis.com/favicon.ico", 
                 "https://modal.com/assets/favicon.svg", 
                 "https://whatthelogo.com/storage/logos/aws-dynamodb-274465.webp"
