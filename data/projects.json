@@ -14,8 +14,8 @@
                 "https://whatthelogo.com/storage/logos/aws-dynamodb-274465.webp"
             ],
             "repository": "https://github.com/winston-edwin-chiong/slrpEV-data-dashboard",
-            "link": "https://slrpev-data-dashboard.onrender.com/",
-            "description": "A data dashboard for UC Berkeley's slrpEV project.\nFive minute, hourly, daily and monthly charging data + forecasts."
+            "link": "https://slrpev-data-dashboard-winston-edwin-chiong.koyeb.app/",
+            "description": "A data dashboard for UC Berkeley's slrpEV project.\nDisplays five minute, hourly, daily and monthly charging demand + forecasts and other cool statistics!"
         },   
         {
             "title": "This Website😊",
