@@ -82,7 +82,6 @@ function ProjectContent({title, techStack, iconPaths, repository, description, l
         <div className="children:my-3">
           <div className="flex justify-between items-center">
             <p className="text-xs md:text-sm lg:text-md">
-              <span className="tracking-widest">Technologies: </span>
               <span className="italic">{techStack.join(", ")}</span>
             </p>
             <Link

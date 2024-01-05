@@ -21,6 +21,16 @@
             "description": ""
         },
         {
+            "code": "CS 168*",
+            "title": "Introduction to the Internet: Architecture and Protocols",
+            "description": ""
+        },
+        {
+            "code": "CS 184*",
+            "title": "Computer Graphics and Imaging",
+            "description": ""
+        },
+        {
             "code": "DATA 8",
             "title": "Foundations of Data Science",
             "description": ""

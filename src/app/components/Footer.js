@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function Footer() {
     return (  
-        <div className='flex space-x-4 justify-center pt-5 pb-4 px-3'>
+        <div className="flex justify-center pt-5 pb-4 px-3">
           <Icon icon={faFileLines} link={"/resume"}/>
           <Icon icon={faGithubAlt} link={"https://github.com/winston-edwin-chiong"}/>
           <Icon icon={faLinkedinIn} link={"https://www.linkedin.com/in/winstonechiong/"}/>
@@ -18,10 +18,10 @@ export default function Footer() {
 
 function Icon({icon, link}) {
   return (
-    <Link href={link} target='_blank' className='py-1 px-1 sm:py-1 sm:px-2'>
-      <button className='btn btn-primary hover:bg-secondary-focus/[.1] hover:transition-all hover:ease-in-out hover:-translate-y-1 hover:scale-110 duration-300'>
+    <Link href={link} target='_blank' className="my-1 md:mx-8 mx-6">
+      <div className='py-1 px-1 sm:py-1 sm:px-2 hover:transition-all hover:ease-in-out hover:-translate-y-1 hover:scale-110 duration-300'>
         <FontAwesomeIcon icon={icon} className='text-md md:text-xl'/>
-      </button>
+      </div>
     </Link>
   )
 }
