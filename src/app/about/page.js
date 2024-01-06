@@ -2,16 +2,15 @@
 import { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import Image from "next/image"
-import Winston1 from "../../../public/images/Winston_Profile_Picture.png"
-import Winston2 from "../../../public/images/Winston_Profile_Picture_2.png"
+import Winston1 from "../../../public/images/Winston_Profile_Picture_1.png"
+import Winston2 from "../../../public/images/Winston_Profile_Picture_2.jpg"
 import Winston3 from "../../../public/images/Winston_Profile_Picture_3.png"
-import Winston4 from "../../../public/images/Winston_Profile_Picture_4.png"
 
 export default function About() {
 
   const[imageIndex, setImageIndex] = useState(0)
 
-  const images = [Winston1, Winston2, Winston3, Winston4]
+  const images = [Winston1, Winston2, Winston3]
 
   const changeImage = () => {
     setImageIndex((imageIndex + 1) % images.length)
@@ -37,6 +36,7 @@ export default function About() {
                 onClick={changeImage} 
                 className="cursor-pointer rounded-md"
                 priority={true}
+                placeholder="blur"
               >
             </Image>
           </motion.div>
