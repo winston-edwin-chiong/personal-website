@@ -2,17 +2,15 @@
 import { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import Image from "next/image"
+import Winston1 from "../../../public/images/Winston_Profile_Picture_1.png"
+import Winston2 from "../../../public/images/Winston_Profile_Picture_2.jpg"
+import Winston3 from "../../../public/images/Winston_Profile_Picture_3.png"
 
 export default function About() {
 
   const[imageIndex, setImageIndex] = useState(0)
 
-  const images = [
-    '/images/Winston_Profile_Picture.JPEG', 
-    '/images/Winston_Profile_Picture_2.png', 
-    '/images/Winston_Profile_Picture_3.png',
-    '/images/Winston_Profile_Picture_4.png'
-  ]
+  const images = [Winston1, Winston2, Winston3]
 
   const changeImage = () => {
     setImageIndex((imageIndex + 1) % images.length)
@@ -35,12 +33,10 @@ export default function About() {
                 key={imageIndex}
                 src={images[imageIndex]} 
                 alt="me :)" 
-                width={500} // width only matters up to a certain point, I think it's because the outer div sets aspect ratio
-                height={250} // this honestly doesn't matter, I think it's because the outer div sets aspect ratio
-                sizes="100vw"
                 onClick={changeImage} 
                 className="cursor-pointer rounded-md"
                 priority={true}
+                placeholder="blur"
               >
             </Image>
           </motion.div>
