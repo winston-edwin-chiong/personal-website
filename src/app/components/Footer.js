@@ -18,7 +18,7 @@ export default function Footer() {
 
 function Icon({icon, link}) {
   return (
-    <Link href={link} target='_blank' className="my-1 md:mx-8 mx-6">
+    <Link href={link} target='_blank' className="my-1 md:mx-8 sm:mx-6 mx-4">
       <div className='py-1 px-1 sm:py-1 sm:px-2 hover:transition-all hover:ease-in-out hover:-translate-y-1 hover:scale-110 duration-300'>
         <FontAwesomeIcon icon={icon} className='text-md md:text-xl'/>
       </div>

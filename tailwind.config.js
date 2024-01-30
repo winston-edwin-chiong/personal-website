@@ -48,7 +48,7 @@ module.exports = {
     themes: [
       {
         dark: {
-          "primary": "#000000",
+          "primary": "#000000", // Look into #212427 for less eye strain
           "--primary": "#000000",
           "primary-content": "#FFFFFF",
           "--primary-content": "#FFFFFF",
@@ -58,7 +58,7 @@ module.exports = {
           "--neutral": "#737373",
         },
         light: {
-          "primary": "#FFFFFF",
+          "primary": "#FFFFFF", // Look into #F0F0F0 for less eye strain
           "--primary": "#FFFFFF",
           "primary-content": "#000000",
           "--primary-content": "#000000",

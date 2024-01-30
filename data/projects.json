@@ -15,7 +15,7 @@
             ],
             "repository": "https://github.com/winston-edwin-chiong/slrpEV-data-dashboard",
             "link": "https://slrpev-data-dashboard-winston-edwin-chiong.koyeb.app/",
-            "description": "A data dashboard for UC Berkeley's slrpEV project.\nDisplays five minute, hourly, daily and monthly charging demand + forecasts and other cool statistics!"
+            "description": "A data dashboard for UC Berkeley's slrpEV project.\nShows you charging demand, forecasts and other cool statistics!"
         },   
         {
             "title": "This Website😊",
@@ -24,7 +24,7 @@
                 "https://tailwindcss.com/favicons/favicon-32x32.png?v=3", 
                 "https://global.discourse-cdn.com/standard17/uploads/threejs/original/2X/e/e4f86d2200d2d35c30f7b1494e96b9595ebc2751.png", 
                 "https://react.dev/favicon.ico", 
-                "https://nextjs.org/favicon.ico", 
+                "https://nextjs.org/favicon.ico",
                 "https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
             ],
             "repository": "https://github.com/winston-edwin-chiong/personal-website",
@@ -32,7 +32,24 @@
             "description": "My home on the interwebs 🕸️."
         },   
         {
-            "title": "Cooking something up...",
+            "title": "Plot-A-Probability 📊",
+            "techStack": ["Tailwind CSS", "Mantine", "Plotly.js", "React", "Typescript", "SciPy", "Python", "Flask"],
+            "iconPaths": [
+                "https://tailwindcss.com/favicons/favicon-32x32.png?v=3", 
+                "https://seeklogo.com/images/M/mantine-logo-235E19C978-seeklogo.com.png",
+                "https://dash.plotly.com/assets/favicon.ico", 
+                "https://react.dev/favicon.ico", 
+                "https://www.typescriptlang.org/icons/icon-144x144.png?v=8944a05a8b601855de116c8a56d3b3ae",
+                "https://scipy.org/images/logo.svg",
+                "https://www.python.org/favicon.ico",
+                "https://flask.palletsprojects.com/en/3.0.x/_static/shortcut-icon.png"
+            ],
+            "repository": "https://github.com/winston-edwin-chiong/plotability",
+            "link": "https://winstonchiong.com/",
+            "description": "An over-engineered probability visualizer."
+        },   
+        {
+            "title": "Cooking something up... 🍴",
             "techStack": ["Oatmeal"],
             "iconPaths": [
                 "/icons/cooking_logo.png"
