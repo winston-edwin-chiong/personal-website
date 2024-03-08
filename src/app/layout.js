@@ -15,21 +15,21 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <MyThemeContextProvider>
-      <body
-        className={exo.className + " bg-primary" + " text-primary-content"}
-        data-theme="dark"
-      >
-        <div className="flex flex-col h-screen">
-          <Navbar />
-          <PageWrapper>
-            {children}
-          </PageWrapper>
-          <Footer />
-        </div>
-      </body>
-      </MyThemeContextProvider>
-    </html>
+    <MyThemeContextProvider>
+      <html lang="en" className="bg-secondary">
+        <body
+          className={exo.className + " bg-primary" + " text-primary-content"}
+          data-theme="dark"
+        >
+          <div className="flex flex-col h-screen">
+            <Navbar />
+            <PageWrapper>
+              {children}
+            </PageWrapper>
+            <Footer />
+          </div>
+        </body>
+      </html>
+    </MyThemeContextProvider>
   );
 }
