@@ -48,7 +48,7 @@ export default function About() {
         <span>
           {"Hi, my name is Winston!"}<br/><br/>
           {"I'm a senior @ UC Berkeley studying civil engineering, and informally, computer science and data science!"}<br/><br/>
-          {"I grew up in 🌉 San Francisco's Ingelside neighborhood and later made a quick trip across the bay to Berkeley after finishing at the City College of San Francisco."}<br/><br/>
+          {"I grew up in 🌉 San Francisco's Ingleside neighborhood and later made a quick trip across the bay to Berkeley after finishing at the City College of San Francisco."}<br/><br/>
         </span>
         </div>
       </div>

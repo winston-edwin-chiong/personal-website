@@ -21,13 +21,13 @@
             "description": ""
         },
         {
-            "code": "CS 168*",
-            "title": "Introduction to the Internet: Architecture and Protocols",
+            "code": "CS 168",
+            "title": "Internet Architecture and Protocols",
             "description": ""
         },
         {
-            "code": "CS 184*",
-            "title": "Computer Graphics and Imaging",
+            "code": "CS 162",
+            "title": "Operating Systems and Systems Programming",
             "description": ""
         },
         {
@@ -58,6 +58,11 @@
         {
             "code": "CIVENG 167",
             "title": "Engineering Project Management",
+            "description": ""
+        },
+        {
+            "code": "CIVENG 295",
+            "title": "Data Science for Energy",
             "description": ""
         }
     ]

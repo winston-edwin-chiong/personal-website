@@ -36,7 +36,7 @@ export default function AnimatedWinston() {
       )
     });
     return controls.stop;
-  }, []);
+  });
   
   return (
     <span>
