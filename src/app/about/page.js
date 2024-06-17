@@ -7,11 +7,11 @@ import WinstonDrawing from "../../../public/images/winston_drawing.png"
 import WinstonWhiteshirt from "../../../public/images/winston_whiteshirt.jpg"
 import WinstonGrad from "../../../public/images/winston_grad.jpg"
 
+const images = [WinstonGrad, WinstonBear, WinstonWhiteshirt, WinstonDrawing]
+
 export default function About() {
 
   const[imageIndex, setImageIndex] = useState(0)
-
-  const images = [WinstonGrad, WinstonBear, WinstonWhiteshirt, WinstonDrawing]
 
   const changeImage = () => {
     setImageIndex((imageIndex + 1) % images.length)
