@@ -2,15 +2,16 @@
 import { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import Image from "next/image"
-import Winston1 from "../../../public/images/Winston_Profile_Picture_1.png"
-import Winston2 from "../../../public/images/Winston_Profile_Picture_2.jpg"
-import Winston3 from "../../../public/images/Winston_Profile_Picture_3.png"
+import WinstonBear from "../../../public/images/winston_bear.png"
+import WinstonDrawing from "../../../public/images/winston_drawing.png"
+import WinstonWhiteshirt from "../../../public/images/winston_whiteshirt.jpg"
+import WinstonGrad from "../../../public/images/winston_grad.jpg"
 
 export default function About() {
 
   const[imageIndex, setImageIndex] = useState(0)
 
-  const images = [Winston1, Winston2, Winston3]
+  const images = [WinstonGrad, WinstonBear, WinstonWhiteshirt, WinstonDrawing]
 
   const changeImage = () => {
     setImageIndex((imageIndex + 1) % images.length)
@@ -37,6 +38,8 @@ export default function About() {
                 className="cursor-pointer rounded-md"
                 priority={true}
                 placeholder="blur"
+                loading="eager"
+                quality={50}
               >
             </Image>
           </motion.div>
@@ -47,7 +50,7 @@ export default function About() {
         <div>
         <span>
           {"Hi, my name is Winston!"}<br/><br/>
-          {"I'm a senior @ UC Berkeley studying civil engineering, and informally, computer science and data science!"}<br/><br/>
+          {"I recently from graduated UC Berkeley, where I studied civil engineering, computer science and data science!"}<br/><br/>
           {"I grew up in 🌉 San Francisco's Ingleside neighborhood and later made a quick trip across the bay to Berkeley after finishing at the City College of San Francisco."}<br/><br/>
         </span>
         </div>
