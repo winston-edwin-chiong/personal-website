@@ -38,8 +38,7 @@ export default function About() {
                 className="cursor-pointer rounded-md"
                 priority={true}
                 placeholder="blur"
-                loading="eager"
-                quality={50}
+                quality={25}
               >
             </Image>
           </motion.div>
