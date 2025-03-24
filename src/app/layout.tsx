@@ -3,6 +3,7 @@ import { Figtree } from "next/font/google";
 import "./globals.css";
 import { Header, Footer } from "@/components";
 import { ThemeProvider } from "@/components/theme-provider";
+import { cn } from "@/lib/utils";
 
 const figtree = Figtree({
   variable: "--font-figtree",
@@ -20,22 +21,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className={figtree.className}>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={cn(figtree.className, "antialiased")}
+    >
       <body>
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
-          <main className="flex flex-col min-h-screen justify-center items-center">
-            <div>
-              <Header />
-            </div>
+          <main className="flex h-screen flex-col items-center justify-center">
+            <Header />
             <div className="flex-grow">{children}</div>
-            <div>
-              <Footer />
-            </div>
+            <Footer />
           </main>
         </ThemeProvider>
       </body>
