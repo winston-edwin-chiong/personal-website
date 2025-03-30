@@ -10,7 +10,12 @@ export default function Footer() {
       >
         <FiLinkedin strokeWidth={1.5} size={20} />
       </Link>
-      <FiMail strokeWidth={1.5} className="mx-5" size={20} />
+      <Link
+        href="mailto:winstonchiong@berkeley.edu"
+        className="mx-5 transition-colors duration-200 ease-in-out hover:text-lime-400"
+      >
+        <FiMail strokeWidth={1.5} size={20} />
+      </Link>
       <Link
         href="https://www.github.com/winston-edwin-chiong"
         target="_blank"

@@ -18,7 +18,7 @@ export default function Home() {
           }
         </div>
       </div>
-      <div className="order-1 mx-15 aspect-auto lg:order-2 lg:mx-0">
+      <div className="order-1 aspect-auto md:mx-15 lg:order-2 lg:mx-0">
         <Image
           src={theme === "light" ? me2 : me}
           className="rounded-lg"
