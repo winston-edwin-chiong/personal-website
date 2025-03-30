@@ -17,7 +17,7 @@ export default function Header() {
           <Link
             key={link.label}
             href={link.href}
-            className={`${i == 0 || i == lastLinkIdx ? "" : "mx-5"} decoration-lime-500 decoration-2 underline-offset-4 transition-colors duration-200 ease-in-out hover:underline`}
+            className={`${i == 0 ? "mr-5" : i == lastLinkIdx ? "ml-5" : "mx-5"} decoration-lime-500 decoration-2 underline-offset-4 transition-colors duration-200 ease-in-out hover:underline`}
           >
             {link.label}
           </Link>
