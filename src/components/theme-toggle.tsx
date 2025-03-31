@@ -11,7 +11,7 @@ export default function ThemeToggle() {
       <FiMoon
         className={cn(
           `${theme === "dark" ? "hidden" : "block"}`,
-          "transition-colors duration-200 ease-in-out hover:text-slate-500",
+          "transition-colors duration-200 ease-in-out hover:text-indigo-500",
         )}
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       />

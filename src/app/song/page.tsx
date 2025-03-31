@@ -1,3 +1,3 @@
 export default function Song() {
-  return <div>SONG</div>;
+  return <div>🚧🚧🚧</div>;
 }

@@ -1,3 +1,3 @@
 export default function Writings() {
-  return <div>WRITINGS</div>;
+  return <div>🚧🚧🚧</div>;
 }
