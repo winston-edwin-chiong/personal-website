@@ -1,13 +1,8 @@
-"use client";
-
 import Image from "next/image";
 import me from "../assets/images/me.jpg";
 import me2 from "../assets/images/me2.jpg";
-import { useTheme } from "next-themes";
 
 export default function Home() {
-  const { theme } = useTheme();
-
   return (
     <div className="grid-rows-auto grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8">
       <div className="order-2 text-center lg:order-1">
@@ -19,7 +14,7 @@ export default function Home() {
       </div>
       <div className="order-1 aspect-auto md:mx-15 lg:order-2 lg:mx-0">
         <Image
-          src={theme === "light" ? me2 : me}
+          src={me2}
           className="rounded-lg"
           alt="a picture of winston!"
           placeholder="blur"
