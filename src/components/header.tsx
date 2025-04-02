@@ -24,7 +24,7 @@ export default function Header() {
             key={link.label}
             href={link.href}
             className={cn(
-              `${i == 0 ? "mr-2.5 md:mr-5" : i == lastLinkIdx ? "ml-2.5 md:ml-5" : "mx-2.5 md:mx-5"} transition-colors duration-200 ease-in-out hover:text-slate-500`,
+              `${i == 0 ? "mr-2.5 lg:mr-5" : i == lastLinkIdx ? "ml-2.5 lg:ml-5" : "mx-2.5 lg:mx-5"} text-xs transition-colors duration-200 ease-in-out hover:text-slate-500 sm:text-sm md:text-base`,
               pathName === link.href ? "text-slate-500" : "",
             )}
           >

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import me from "../assets/images/me.jpg";
+// import me from "../assets/images/me.jpg";
 import me2 from "../assets/images/me2.jpg";
 
 export default function Home() {
