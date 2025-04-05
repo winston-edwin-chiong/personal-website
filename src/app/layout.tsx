@@ -24,7 +24,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn(figtree.className, "antialiased")}
+      className={cn(figtree.className, "antialiased", "cursor-default")}
     >
       <body>
         <ThemeProvider

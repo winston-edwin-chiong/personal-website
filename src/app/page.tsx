@@ -5,12 +5,49 @@ import me2 from "../assets/images/me2.jpg";
 export default function Home() {
   return (
     <div className="grid-rows-auto grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8">
-      <div className="order-2 text-center lg:order-1">
-        <div className="text-lg font-thin">
-          {"Hello stranger! I'm Winston!"}
+      <div className="order-2 lg:order-1">
+        <div className="flex h-full flex-col justify-between">
+          <div>
+            <div className="text-3xl font-extralight tracking-wide">
+              {"Hello! I'm Winston!"}
+            </div>
+            <div className="my-5">
+              <span>
+                {"I like making things. I'm currently a software engineer at "}
+              </span>
+              <span className="underline decoration-[#E31937] decoration-2 underline-offset-2">
+                {"Tesla"}
+              </span>
+              <span>
+                {
+                  ". Previously, I grew up in San Francisco, attended the City College of San Francisco, and graduated from "
+                }
+              </span>
+              <span className="underline decoration-[#002676] decoration-2 underline-offset-2">
+                {"UC"}
+              </span>
+              <span> </span>
+              <span className="underline decoration-[#FDB515] decoration-2 underline-offset-2">
+                {"Berkeley"}
+              </span>
+              <span>
+                {
+                  ", where I studied civil engineering and (informally) computer science."
+                }
+              </span>
+            </div>
+            <div className="my-5">
+              {
+                "Outside of work, I enjoy flavor of the month hobbies, and meeting new people!"
+              }
+            </div>
+          </div>
+          <div className="text-center italic">
+            <div>{"🚧🚧🚧"}</div>
+            <div>{"*This site is a work in progress :D"}</div>
+            <div>{"🚧🚧🚧"}</div>
+          </div>
         </div>
-        <div className="my-5">{"🚧🚧🚧"}</div>
-        <div>{"This site is a work in progress, but glad you're here!"}</div>
       </div>
       <div className="order-1 aspect-auto md:mx-15 lg:order-2 lg:mx-0">
         <Image
