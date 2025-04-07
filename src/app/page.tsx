@@ -20,15 +20,14 @@ export default function Home() {
               </span>
               <span>
                 {
-                  ". Previously, I grew up in San Francisco, attended the City College of San Francisco, and graduated from "
+                  ". Previously, I was born and grew up in San Francisco, attended the City College of San Francisco, and graduated from "
                 }
               </span>
               <span className="underline decoration-[#002676] decoration-2 underline-offset-2">
-                {"UC"}
+                {"UC Be"}
               </span>
-              <span> </span>
               <span className="underline decoration-[#FDB515] decoration-2 underline-offset-2">
-                {"Berkeley"}
+                {"rkeley"}
               </span>
               <span>
                 {
