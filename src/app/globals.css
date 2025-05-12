@@ -4,22 +4,28 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #f8f8ff;
-  --foreground: #0c0c0c;
+  --background: oklch(0.98 0.0093 286.23);
+  --card-background: oklch(0.93 0.0095 286.21);
+  --foreground: oklch(0.15 0 0);
 }
 
 .dark {
-  --background: #0c0c0c;
-  --foreground: #f8f8ff;
+  --background: oklch(0.15 0 0);
+  --card-background: oklch(0.2 0 0);
+  --foreground: oklch(0.98 0.0093 286.23);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-card-background: var(--card-background);
 }
 
 @layer base {
   body {
     @apply bg-background text-foreground;
+  }
+  p {
+    @apply [&:not(:first-child)]:mt-5;
   }
 }

@@ -3,7 +3,7 @@ import { FiChevronRight } from "react-icons/fi";
 
 export default function NotFound() {
   return (
-    <>
+    <div className="flex flex-grow flex-col items-center sm:my-8 md:my-6 xl:justify-center">
       <div>{"There's nothing here!"}</div>
       <Link className="my-5" href="/">
         <div className="group decoration-primary inline-flex items-center decoration-1 underline-offset-4 transition-transform duration-300 hover:underline">
@@ -11,6 +11,6 @@ export default function NotFound() {
           <FiChevronRight className="ml-2 transition-transform duration-300 group-hover:translate-x-2" />
         </div>
       </Link>
-    </>
+    </div>
   );
 }

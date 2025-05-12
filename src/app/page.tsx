@@ -2,14 +2,14 @@ import Image from "next/image";
 // import me from "../assets/images/me.jpg";
 import me2 from "../assets/images/me2.jpg";
 
-export default function Home() {
+export default function Me() {
   return (
     <div className="flex flex-grow flex-col items-center sm:my-8 md:my-6 xl:justify-center">
       <div className="grid-rows-auto grid grid-cols-1 gap-6 xl:grid-cols-2 xl:gap-8">
         <div className="order-2 xl:order-1">
           <div className="flex h-full flex-col justify-between">
             <div>
-              <div className="text-2xl font-extralight tracking-wide">
+              <div className="mb-5 text-2xl font-extralight tracking-wide">
                 {"Hello! I'm Winston!"}
               </div>
               <div className="text-sm">
